@@ -1,0 +1,31 @@
+label{
+    display: block;
+}
+#resultado{
+    width: 400px;
+}
+#numeros{
+    height: 100px;
+    width: 400px;
+}
+.Aprovado{
+    background: rgb(181, 238, 181);
+}
+.Reprovado{
+    background: rgb(241, 111, 111);
+}
+tr{
+    text-align: center;
+  }
+#tabela{
+    width: 90vw;
+    margin: 5%; 
+}
+tfoot{
+    background-color: antiquewhite;
+    font-size: larger;
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+  
+  
