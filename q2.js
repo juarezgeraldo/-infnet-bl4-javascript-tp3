@@ -42,14 +42,14 @@ function processaQ2() {
 
     let numero = parseInt(numeroCalc.value)
 
-    // if (minimo.valueAsNumber == NaN || maximo.valueAsNumber == NaN) {
-    //     window.alert("É necessário informar o intervalo de valores.")
-    //     return false
-    // }
+    if (isNaN(numero)) {
+        window.alert("É necessário informar o valor solicitado.")
+        return false
+    }
 
     horaInicio = new Date().getMilliseconds();
     let resultado = calculaFatorial(numero);
-    console.log(resultado)
+
     horaFinal = new Date().getMilliseconds();
     tempoDecorrido = horaFinal - horaInicio
 

@@ -8,6 +8,11 @@ label{
     height: 100px;
     width: 400px;
 }
+#numerosEncontrados{
+    height: 100px;
+    width: 400px;
+}
+
 .Aprovado{
     background: rgb(181, 238, 181);
 }
@@ -28,4 +33,6 @@ tfoot{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
   
-  
+.tdLogin{
+    text-align: left;
+}

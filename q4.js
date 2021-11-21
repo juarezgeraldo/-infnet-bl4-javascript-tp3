@@ -27,8 +27,8 @@ function montaDetalhe(varHtml) {
             </div> 
             <div>
                 <h2>Resultado</h2>
-                <label for="resultado">Resultado:</label>
-                <textarea id="numeros" name="numeros" disabled></textarea>
+                <label for="numerosEncontrados">Resultado:</label>
+                <textarea id="numerosEncontrados" name="numerosEncontrados" disabled></textarea>
             </div>
         </form>`
     return
@@ -60,10 +60,10 @@ function processaQ4() {
     let numeroInicial = parseInt(inicio.value)
     let numeroFinal = parseInt(final.value)
 
-    // if (minimo.valueAsNumber == NaN || maximo.valueAsNumber == NaN) {
-    //     window.alert("É necessário informar o intervalo de valores.")
-    //     return false
-    // }
+    if (isNaN(qtdNumeros) || isNaN(numeroInicial) || isNaN(numeroFinal)) {
+        window.alert("É necessário informar todos os valores solicitados.")
+        return false
+    }
 
     if (numeroInicial >= numeroFinal) {
         window.alert("O número inicial deve ser menor que o numero final.")
@@ -77,7 +77,7 @@ function processaQ4() {
     let numeros = montaNumeros(qtdNumeros, numeroInicial, numeroFinal);
     numeros.sort(function (a, b) { return a - b })
 
-    let numerosHtml = document.getElementById("numeros")
+    let numerosHtml = document.getElementById("numerosEncontrados")
     numerosHtml.value = numeros
 
     return

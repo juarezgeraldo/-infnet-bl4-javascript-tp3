@@ -54,10 +54,10 @@ function processaQ1() {
     let numeroMinimo = parseInt(minimo.value)
     let numeroMaximo = parseInt(maximo.value)
 
-    // if (minimo.valueAsNumber == NaN || maximo.valueAsNumber == NaN) {
-    //     window.alert("É necessário informar o intervalo de valores.")
-    //     return false
-    // }
+    if (isNaN(numeroMinimo) || isNaN(numeroMaximo)) {
+        window.alert("É necessário informar todos os valores solicitados.")
+        return false
+    }
 
     if (numeroMinimo >= numeroMaximo) {
         window.alert("O valor mínimo deve ser menor que o valor máximo.")

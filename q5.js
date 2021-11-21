@@ -25,8 +25,8 @@ function montaDetalhe(varHtml) {
             </div> 
             <div>
                 <h2>Resultado</h2>
-                <label for="resultado">Resultado:</label>
-                <input type="text" id="resultado" name="resultado" disabled>
+                <label for="tipoTriangulo">Tipo de triângulo:</label>
+                <input type="text" id="tipoTriangulo" name="tipoTriangulo" disabled>
             </div>
         </form>`
     return
@@ -59,12 +59,13 @@ function processaQ5() {
     let lado2 = parseInt(ladoB.value)
     let lado3 = parseInt(ladoC.value)
 
-    // if (minimo.valueAsNumber == NaN || maximo.valueAsNumber == NaN) {
-    //     window.alert("É necessário informar o intervalo de valores.")
-    //     return false
-    // }
+    if (isNaN(lado1) || isNaN(lado2) || isNaN(lado3)) {
+        window.alert("É necessário informar todos os valores solicitados.")
+        return false
+    }
 
-    let resultadoHtml = document.getElementById("resultado")
+
+    let resultadoHtml = document.getElementById("tipoTriangulo")
     resultadoHtml.value = verificaTriangulo(lado1, lado2, lado3)
 
     return
